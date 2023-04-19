@@ -1,14 +1,12 @@
-import { BookContainer, Title, PhoneIcon, Container } from './Home.styled';
+import { PhoneIcon } from './Home.styled';
+import { CloseBook } from 'components/СlosedBook/СlosedBook';
 
 export const Home = () => {
   return (
     <main>
-      <BookContainer>
-        <Container>
-          <Title>PhoneBook</Title>
-          <PhoneIcon />
-        </Container>
-      </BookContainer>
+      <CloseBook title={'PhoneBook'}>
+        <PhoneIcon />
+      </CloseBook>
     </main>
   );
 };

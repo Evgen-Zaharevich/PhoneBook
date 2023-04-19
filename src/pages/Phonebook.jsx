@@ -12,7 +12,7 @@ import {
   IconContact,
 } from './Phonebook.styled';
 
-export const Book = () => {
+export const Phonebook = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {

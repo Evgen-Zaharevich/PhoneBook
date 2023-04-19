@@ -1,7 +1,12 @@
+import { FormRegister } from 'components/Form/FormRegister';
+import { CloseBook } from 'components/СlosedBook/СlosedBook';
+
 export const Register = () => {
   return (
     <main>
-      <h1>Register</h1>
+      <CloseBook title={'Register'}>
+        <FormRegister />
+      </CloseBook>
     </main>
   );
 };

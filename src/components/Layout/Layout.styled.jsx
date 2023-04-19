@@ -40,7 +40,8 @@ export const LogoLink = styled(NavLink)`
 
   &:hover {
     color: #fc0;
-    text-shadow: black 1px 1px 1px;
+    /* text-shadow: black 1px 1px 1px; */
+    filter: drop-shadow(3px 3px 1px black);
   }
 `;
 

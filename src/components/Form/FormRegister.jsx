@@ -1,9 +1,6 @@
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { nanoid } from 'nanoid';
-import { useSelector, useDispatch } from 'react-redux';
-import { getContacts } from 'redux/selectors';
-import { addContacts } from 'redux/operations';
+
 import {
   FormField,
   ErrorMessage,
@@ -12,22 +9,7 @@ import {
   Button,
 } from 'components/Form/Form.styled';
 
-export const ContactForm = () => {
-  const contacts = useSelector(getContacts);
-  const dispatch = useDispatch();
-
-  const addNewContact = newContact => {
-    const hasAlready = contacts.some(
-      el => el.name.toLowerCase() === newContact.name.toLowerCase()
-    );
-
-    if (hasAlready) {
-      alert(`${newContact.name} is already in contacts.`);
-      return;
-    }
-    dispatch(addContacts(newContact));
-  };
-
+export const FormRegister = () => {
   return (
     <Formik
       initialValues={{
@@ -35,13 +17,7 @@ export const ContactForm = () => {
         phone: '',
       }}
       validationSchema={schema}
-      onSubmit={(values, { resetForm }) => {
-        addNewContact({
-          id: nanoid(),
-          ...values,
-        });
-        resetForm();
-      }}
+      onSubmit={''}
     >
       <Form>
         <FormField>
@@ -68,7 +44,7 @@ export const ContactForm = () => {
           />
           <ErrorMessage name="phone" component="p" />
         </FormField>
-        <Button type="submit">Add Contact</Button>
+        <Button type="submit">Create Account</Button>
       </Form>
     </Formik>
   );
