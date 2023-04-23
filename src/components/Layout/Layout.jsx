@@ -1,29 +1,12 @@
+import { AppBar } from 'components/AppBar/AppBar';
 import { Outlet } from 'react-router-dom';
-import {
-  HeaderLink,
-  LogoLink,
-  Icon,
-  Navigation,
-  Header,
-  AppContainer,
-} from './Layout.styled';
+import { Container } from './Layout.styled';
 
 export const Layout = () => {
   return (
-    <AppContainer>
-      <Header>
-        <Navigation>
-          <LogoLink to="/">
-            <Icon /> PhoneBook
-          </LogoLink>
-          <div>
-            <HeaderLink to="/register">Register</HeaderLink>
-            <HeaderLink to="/login">Login</HeaderLink>
-            <HeaderLink to="/Phonebook">Book</HeaderLink>
-          </div>
-        </Navigation>
-      </Header>
+    <Container>
+      <AppBar />
       <Outlet />
-    </AppContainer>
+    </Container>
   );
 };

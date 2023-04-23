@@ -11,7 +11,17 @@ export const Form = styled(FormikForm)`
   align-items: center;
 `;
 
-export const FormField = styled.label`
+export const FormFieldName = styled.label`
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-family: 'Tangerine', cursive;
+  text-shadow: black 1px 1px 2px;
+  color: #fc0;
+  margin-left: 20px;
+`;
+
+export const FormFieldNumber = styled.label`
   font-size: 50px;
   margin-bottom: 50px;
   font-weight: 700;
@@ -27,7 +37,23 @@ export const ErrorMessage = styled(FormikError)`
   color: red;
 `;
 
-export const Field = styled(FormikField)`
+export const FieldName = styled(FormikField)`
+  width: 310px;
+  height: 25px;
+  background-color: inherit;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: 0.4s;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 15px;
+
+  &:hover {
+    border-color: #fc0;
+  }
+`;
+
+export const FieldNumber = styled(FormikField)`
   width: 310px;
   height: 25px;
   background-color: inherit;

@@ -15,7 +15,6 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
-  /* transition: 0.1s; */
 
   &:hover {
     font-weight: 700;

@@ -1,7 +1,12 @@
+import { FormLogin } from 'components/FormLogin/FormLogin';
+import { CloseBook } from 'components/СlosedBook/СlosedBook';
+
 export const Login = () => {
   return (
     <main>
-      <h1>Log IN</h1>
+      <CloseBook title={'Log In'}>
+        <FormLogin />
+      </CloseBook>
     </main>
   );
 };

@@ -24,10 +24,10 @@ export const ContainerPhonebook = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 20px;
 `;
 
 export const ContainerContacts = styled.div`
   width: 460px;
-  margin-left: 90px;
+  margin-left: 70px;
 `;

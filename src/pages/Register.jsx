@@ -1,4 +1,4 @@
-import { FormRegister } from 'components/Form/FormRegister';
+import { FormRegister } from 'components/FormRegister/FormRegister';
 import { CloseBook } from 'components/СlosedBook/СlosedBook';
 
 export const Register = () => {

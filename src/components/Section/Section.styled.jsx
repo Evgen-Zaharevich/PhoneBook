@@ -7,6 +7,6 @@ export const Title = styled.h2`
   text-align: center;
   font-size: 70px;
   font-family: 'Tangerine', cursive;
-  text-shadow: black 1px 1px 2px;
+  text-shadow: black 2px 2px 1px;
   color: #fc0;
 `;

@@ -4,15 +4,15 @@ import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contact/operations';
 import {
   ContainerApp,
   ContainerPhonebook,
   ContainerContacts,
   IconContact,
-} from './Phonebook.styled';
+} from './ContactsBook.styled';
 
-export const Phonebook = () => {
+export const ContactsBook = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {

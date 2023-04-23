@@ -1,15 +1,14 @@
 // import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { List, ListItem, Button } from 'components/Contacts/Contacts.styled';
+import { IconDelete } from 'components/Contacts/Contacts.styled';
 import {
   getFilter,
   getContacts,
   getIsLoading,
   getError,
-} from 'redux/selectors';
-import { List, ListItem, Button } from 'components/Contacts/Contacts.styled';
-import { deleteContacts } from 'redux/operations';
-
-import { IconDelete } from 'components/Contacts/Contacts.styled';
+} from 'redux/contact/selectors';
+import { deleteContact } from 'redux/contact/operations';
 
 export const Contacts = () => {
   const dispatch = useDispatch();
@@ -33,10 +32,10 @@ export const Contacts = () => {
       {error ? (
         <b>Sorry, an error occurred on the server</b>
       ) : (
-        showFilteredContacts().map(({ id, name, phone }) => (
+        showFilteredContacts().map(({ id, name, number }) => (
           <ListItem key={id}>
-            {name}: {phone}
-            <Button type="button" onClick={() => dispatch(deleteContacts(id))}>
+            {name}: {number}
+            <Button type="button" onClick={() => dispatch(deleteContact(id))}>
               <IconDelete />
             </Button>
           </ListItem>
